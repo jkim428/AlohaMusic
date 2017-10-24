@@ -113,7 +113,15 @@ public class MusicActivity extends AppCompatActivity {
                 }
                 break;
 
-
         }
+    }
+
+    // Override onStop method to release MediaPlayers
+    // Prevent memory leaks
+    @Override
+    protected void onStop() {
+        super.onStop();
+        ukuleleMediaPlayer.release();
+        ipuMediaPlayer.release();
     }
 }
