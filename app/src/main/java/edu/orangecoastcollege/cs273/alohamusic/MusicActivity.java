@@ -117,7 +117,7 @@ public class MusicActivity extends AppCompatActivity {
     }
 
     // Override onStop method to release MediaPlayers
-    // Prevent memory leaks
+    // Prevent memory leaks - VideoView takes care of itself
     @Override
     protected void onStop() {
         super.onStop();
